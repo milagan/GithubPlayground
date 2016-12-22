@@ -69,3 +69,12 @@ $ git stash branch admin stash@{0}
 ```
 $ git stash clear
 ```
+# Purging History
+## Create a backup of the repository
+```
+$ git clone petshop petshop-filter
+```
+## Tree filter
+```
+$ git filter-branch --tree-filter 'rm -f password.txt'
+```
