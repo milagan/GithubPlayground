@@ -139,3 +139,10 @@ $ git submodule init
 ```
 $ git submodule update
 ```
+## Check submodule if already pushed
+```
+$ git push --recurse-submodules=check
+$ git push --recurse-submodules=on-demand -- push submodule as well
+alias
+$ git config --global alias.pushall "push --recurse-submodules=on-demand"
+```
