@@ -135,3 +135,9 @@ $ git merge clean_up
 ```
 $ git branch -d clean_up
 ```
+# Collaboration Basics
+## Conflict between remote and local
+```
+$ git pull
+$ git push
+```
