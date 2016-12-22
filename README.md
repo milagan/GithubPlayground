@@ -222,3 +222,72 @@ $ git rebase --skip
 ```
 $ git rebase --abort
 ```
+# History and Configuration
+## Show one liner log
+```
+$ git log --pretty=oneline
+```
+## Formatting output of log
+```
+$ git log --pretty=format:"%h %ad- %s [%an]"
+-- %ad = author date
+-- %an = author name
+-- %h = SHA hash
+-- %s = subject
+-- %d = ref names
+```
+## Show lines added and removed from every commit (PATCH)
+```
+$ git log --oneline -p
+```
+## Show how many insertions and deletions from every commit
+```
+$ git log --oneline --stat
+```
+## Graphical option for commits
+```
+$ git log --oneline --graph
+```
+## Log output based on time
+```
+$ git log --until=1.minute.ago
+$ git log --until=1.day.ago
+$ git log --until=1.hours.ago
+$ git log --since=2000-01-01 --until=2012-12-21
+```
+## Check changes from last commits
+```
+$ git diff
+$ git diff HEAD^ -- parent of latest commit
+$ git diff HEAD^^ -- grandparent of latest commit
+$ git diff HEAD~5 -- 5 commits ago
+$ git diff HEAD^..HEAD -- second most recent commit vs. most recent
+$ git diff master admin -- difference between branches
+```
+## Check who made the commits
+```
+$ git blame index.html --date short
+```
+## Exclude folder/files from git
+```
+via .git/info/exclude file
+via .gitignore
+```
+## Remove files
+```
+$ git rm README.txt
+$ git commit -m "Removed README.txt"
+```
+## Stop tracking the file
+```
+$ git rm --cached development.log
+```
+## Show global Configuration
+```
+$ git config --list
+```
+## Create aliases
+```
+$ git config --global alias.mylog "log --pretty=format:'%h %s [%an]' --graph"
+$ git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+```
