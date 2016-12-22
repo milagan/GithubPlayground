@@ -141,7 +141,7 @@ $ git branch -d clean_up
 $ git pull
 $ git push
 ```
-# Branching
+# Branching & Tagging
 ## Create a remote branch then push to remote
 ```
 $ git checkout -b shopping_cart
@@ -195,4 +195,30 @@ $ git push --tags
 ## Update local branch/tag info
 ```
 $ git fetch
+```
+# Rebase & Conflict
+## Pull and commit
+```
+$ git fetch
+$ git rebase
+```
+## Local branch rebase
+```
+$ git checkout admin
+$ git rebase master
+$ git checkout master
+$ git merge admin
+```
+## Conflict in rebase
+```
+$ git add README.txt
+$ git rebase --continue -- after changing files with conflicts
+```
+## Skip the patch
+```
+$ git rebase --skip
+```
+## Abort the rebase
+```
+$ git rebase --abort
 ```
