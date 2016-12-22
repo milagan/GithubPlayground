@@ -113,3 +113,16 @@ $ git cherry-pick --signoff 5321 -- adds current user's name to commit message
 $ git cherry-pick --no-commit 53212e5 55ae374
 $ git commit -m "Updates"
 ```
+# Submodules
+## Add a Submodule
+```
+$ git submodule add https://github.com/milagan/test.git
+$ git commit -m "Add Test submodule."
+```
+## Update a Submodule
+```
+$ cd test
+$ git checkout master
+$ git commit -am "Testing submodule"
+$ git push
+```
