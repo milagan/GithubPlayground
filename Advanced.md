@@ -146,3 +146,13 @@ $ git push --recurse-submodules=on-demand -- push submodule as well
 alias
 $ git config --global alias.pushall "push --recurse-submodules=on-demand"
 ```
+# Reflog
+# Show Reflog
+```
+$ git reflog
+$ git log --walk-reflogs
+```
+# Get back a commit
+```
+$ git reset --hard 1e62
+```
