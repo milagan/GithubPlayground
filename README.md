@@ -141,3 +141,9 @@ $ git branch -d clean_up
 $ git pull
 $ git push
 ```
+# Branching
+## Create a remote branch then push to remote
+```
+$ git checkout -b shopping_cart
+$ git push origin shopping_care
+```
