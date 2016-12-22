@@ -1,0 +1,3 @@
+[submodule "NetCoreWebApp"]
+	path = NetCoreWebApp
+	url = https://github.com/milagan/NetCoreWebApp.git
