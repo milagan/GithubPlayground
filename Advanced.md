@@ -76,5 +76,13 @@ $ git clone petshop petshop-filter
 ```
 ## Tree filter
 ```
-$ git filter-branch --tree-filter 'rm -f password.txt'
+$ git filter-branch --tree-filter 'git rm -f password.txt' -- --all
+```
+## Index filter
+```
+$ git filter-branch --index-filter 'git rm --cached --ignore-unmatch password.txt'
+```
+## Delete commits that are empty
+```
+$ git filter-branch -f --prune-empty -- --all
 ```
