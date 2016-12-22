@@ -125,4 +125,17 @@ $ cd test
 $ git checkout master
 $ git commit -am "Testing submodule"
 $ git push
+
+-- parent directory
+$ git add Test
+$ git commit -m "Update submodule"
+$ git push
+```
+## Initialize submodule after clone
+```
+$ git submodule init
+```
+## Pull down submodule
+```
+$ git submodule update
 ```
