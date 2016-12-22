@@ -1,6 +1,7 @@
 # Github Playground
 Testing Git
-status
+
+# Try Git
 ## Check help
 ```
 $ git help
@@ -20,7 +21,7 @@ $ git init
 ```
 $ git status
 ```
-## Add files/files
+## Add file/files/directory
 ```
 $ git add octocat.txt
 $ git add .
@@ -76,32 +77,17 @@ $ git reset octofamily/octodog.txt
 ```
 $ git checkout -- octocat.txt
 ```
-## Create a branch
-```
-$ git branch clean_up
-```
-## Switch to branch
-```
-$ git checkout clean_up
-```
 ## Remove files and stage the removal
 ```
 $ git rm *.txt
 ```
-## Merge branch to master
-```
-$ git checkout master
-$ git merge clean_up
-```
-## Delete a branch
-```
-$ git branch -d clean_up
-```
+
+# Staging & Remote
 ## Skip staging and commit
 ```
 $ git commit -a -m "Modify readme"
 ```
-## Undo the last commit, put changes into changing
+## Undo the last commit, put changes into staging
 ```
 $ git reset --soft HEAD^
 ```
@@ -121,4 +107,31 @@ $ git remote -v
 ## Password caching
 ```
 http://help.github.com/articles/set-up-git
+```
+# Cloning and Branching
+## Clone a repository
+```
+$ git clone https://github.com/codeschool/git-real.git
+$ git clone https://github.com/codeschool/git-real.git git-demo -- different folder name
+```
+## Create a branch
+```
+$ git branch clean_up
+```
+## Switch to branch
+```
+$ git checkout clean_up
+```
+## Create and move to branch
+```
+$ git checkout -b admin
+```
+## Merge branch to master
+```
+$ git checkout master
+$ git merge clean_up
+```
+## Delete a branch
+```
+$ git branch -d clean_up
 ```
