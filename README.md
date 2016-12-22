@@ -42,6 +42,10 @@ $ git log
 ```
 $ git remote add origin https://github.com/try-git/try_git.git
 ```
+## Remove remotes
+```
+$ git remote rm origin
+```
 ## Push changes to remote repository
 ```
 $ git push -u origin master
@@ -49,13 +53,11 @@ $ git push -u origin master
 ## Pull down change from remote repository
 ```
 $ git pull origin master
----
 $ git pull
 ```
 ## Check changes from last commit
 ```
 $ git diff HEAD
----
 $ git diff
 ```
 ## Check staged changes
@@ -94,4 +96,29 @@ $ git merge clean_up
 ## Delete a branch
 ```
 $ git branch -d clean_up
+```
+## Skip staging and commit
+```
+$ git commit -a -m "Modify readme"
+```
+## Undo the last commit, put changes into changing
+```
+$ git reset --soft HEAD^
+```
+## Undo the last commit and all changes
+```
+$ git reset --hard HEAD^
+$ git reset --hard HEAD^^ -- undo the last 2 commits and all changes
+```
+## Amend the last commit
+```
+$ git commit --amend -m "Modify readme & add todo.txt"
+```
+## Show remote repositories
+```
+$ git remote -v
+```
+## Password caching
+```
+http://help.github.com/articles/set-up-git
 ```
