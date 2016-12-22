@@ -155,7 +155,7 @@ $ git pull
 ```
 $ git branch -r
 ```
-## Remote show
+## Remote show (status of all branches)
 ```
 $ git remote show origin
 ```
@@ -191,4 +191,8 @@ $ git tag -a v0.0.3 -m "version 0.0.3"
 ## Push new tags
 ```
 $ git push --tags
+```
+## Update local branch/tag info
+```
+$ git fetch
 ```
