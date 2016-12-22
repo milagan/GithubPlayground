@@ -86,3 +86,30 @@ $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch password.tx
 ```
 $ git filter-branch -f --prune-empty -- --all
 ```
+# Working Together & Cherry-Pick
+## Line Endings
+```
+$ git config --global core.autocrlf input -- Linux
+$ git config --global core.autocrlf true -- Windows
+```
+## .gitattributes
+```
+text=auto
+*.html text
+*.png binary
+*.sh text eol=lf
+*.bat text elo=crlf
+```
+## Cherry-Pick
+```
+$ git checkout master
+$ git cherry-pick 53212e2
+$ git cherry-pick --edit 53212e2 -- edit commit message
+$ git cherry-pick -x 5321 -- add source SHA to commit message
+$ git cherry-pick --signoff 5321 -- adds current user's name to commit message
+```
+## Cherry pick multiple commits
+```
+$ git cherry-pick --no-commit 53212e5 55ae374
+$ git commit -m "Updates"
+```
