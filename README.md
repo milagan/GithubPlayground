@@ -147,3 +147,52 @@ $ git push
 $ git checkout -b shopping_cart
 $ git push origin shopping_care
 ```
+## Get all branches
+```
+$ git pull
+```
+## List all remote branch
+```
+$ git branch -r
+```
+## Remote show (status of all branches)
+```
+$ git remote show origin
+```
+## Removing a remote branch
+```
+$ git push origin :shopping_cart
+```
+## Deleting a branch
+``` 
+$ git branch -d shopping_cart
+$ git branch -D shopping_cart -- delete branch event with uncommited changes
+```
+## Clean up stale branches
+```
+$ git remote prune origin
+```
+## Link up a local branch (staging) to remote branch (master)
+```
+$ git push origin staging:master
+```
+## List all tags
+```
+$ git tag
+```
+## Checkout code at commit (tag)
+```
+$ git checkout v0.0.1
+```
+## Add a new tag
+```
+$ git tag -a v0.0.3 -m "version 0.0.3"
+```
+## Push new tags
+```
+$ git push --tags
+```
+## Update local branch/tag info
+```
+$ git fetch
+```
